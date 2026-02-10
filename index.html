@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple, offline-first todo list application">
+  <meta name="theme-color" content="#2196F3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Todo">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Todo PWA</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Todo PWA</h1>
+    </header>
+
+    <section class="input-section" aria-label="Add new todo">
+      <form id="todo-form" role="form">
+        <input
+          type="text"
+          id="todo-input"
+          class="todo-input"
+          placeholder="Add a new todo..."
+          maxlength="500"
+          aria-label="New todo text"
+          autocomplete="off"
+        >
+        <button type="submit" class="add-btn" aria-label="Add todo">Add</button>
+      </form>
+    </section>
+
+    <nav class="filter-tabs" aria-label="Filter todos">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+      <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+    </nav>
+
+    <section class="todo-list-section" aria-label="Todo list">
+      <ul id="todo-list" class="todo-list" role="list"></ul>
+      <p id="empty-state" class="empty-state" hidden>No todos yet. Add one above!</p>
+    </section>
+
+    <footer id="footer" class="footer" hidden>
+      <span id="active-count" class="active-count" role="status" aria-live="polite"></span>
+      <button id="clear-completed" class="clear-completed-btn" hidden>Clear Completed</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

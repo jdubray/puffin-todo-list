@@ -1,0 +1,1149 @@
+{
+  "id": "c74bcdb7-24df-44f2-82e3-3b39d8120e18",
+  "sprintId": "mlfpk00ijcmb5gcy8",
+  "status": "approved",
+  "iteration": 1,
+  "stories": [
+    {
+      "id": "48c9dafb-7c11-4f9f-8275-58e74ed526b1",
+      "title": "Data Persistence"
+    },
+    {
+      "id": "d902df67-7e9d-402f-b842-fc1148a79ae8",
+      "title": "Responsive Mobile Design"
+    },
+    {
+      "id": "2a24f307-d831-4526-a9cd-26dadaccea64",
+      "title": "PWA Manifest Configuration"
+    },
+    {
+      "id": "569a486c-5467-473c-9abb-f7d60c74bd4a",
+      "title": "Service Worker for Offline Support"
+    },
+    {
+      "id": "384b892d-481e-487a-940f-01acc7a832f2",
+      "title": "Keyboard Accessibility"
+    },
+    {
+      "id": "cd860029-931b-4a0b-bcbe-7ee5676d5ec7",
+      "title": "Semantic HTML and ARIA Labels"
+    },
+    {
+      "id": "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+      "title": "Add a New Todo"
+    },
+    {
+      "id": "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+      "title": "Display Todo List"
+    },
+    {
+      "id": "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+      "title": "Mark Todo as Complete"
+    },
+    {
+      "id": "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+      "title": "Delete a Todo"
+    },
+    {
+      "id": "73dc3926-97ea-4030-bcfc-beb3f3d393be",
+      "title": "Edit Todo Title"
+    },
+    {
+      "id": "c7e25fee-c032-468a-a8b9-9b97610146b1",
+      "title": "Filter Todos"
+    },
+    {
+      "id": "fab01c47-d65e-4c9a-adbf-a2876ace0acf",
+      "title": "Display Active Count"
+    },
+    {
+      "id": "5c4045d8-9f19-47e9-9688-7d8c4eed78e5",
+      "title": "Clear Completed Todos"
+    },
+    {
+      "id": "52eeaad9-2b8d-49f7-8d18-3fa989b9f4bf",
+      "title": "Add a New Todo"
+    },
+    {
+      "id": "c28340e9-2bc6-4e8b-ad99-acf543170584",
+      "title": "Display Todo List"
+    },
+    {
+      "id": "5a5f7bf7-253c-4119-824e-aa7ce58fcd1f",
+      "title": "Mark Todo as Complete"
+    },
+    {
+      "id": "d9cf266f-2ff7-4db9-9751-b3b2b471d81f",
+      "title": "Delete a Todo"
+    },
+    {
+      "id": "4ebd7ea8-36d9-4741-9eeb-0f123aad76d2",
+      "title": "Edit Todo Title"
+    },
+    {
+      "id": "064a1350-e29c-4182-8a1c-7b2de17aeb06",
+      "title": "Filter Todos by Status"
+    },
+    {
+      "id": "7cc59e5b-9b6f-45f4-ab10-3efff9e8b110",
+      "title": "Display Active Todo Count"
+    },
+    {
+      "id": "a4aca928-cefe-47f4-a69b-4acd3e1c4c7b",
+      "title": "Clear Completed Todos"
+    },
+    {
+      "id": "3b8ffc7e-7c54-452a-a20f-dc5ff5dfa026",
+      "title": "Local Storage Persistence"
+    },
+    {
+      "id": "4465af6e-e9cf-42d6-967c-4516edb22cde",
+      "title": "Responsive Mobile Design"
+    },
+    {
+      "id": "fd4963a7-6a60-47a9-a0a3-da015ef2007b",
+      "title": "PWA Manifest Configuration"
+    },
+    {
+      "id": "8be8863b-5280-4fd2-a1e3-5d3cd69ce7a7",
+      "title": "Service Worker for Offline Support"
+    },
+    {
+      "id": "b1d4384a-dc95-4b5a-b353-4af6a60e71e2",
+      "title": "Keyboard Accessibility"
+    },
+    {
+      "id": "45a6ec82-55a8-4dde-be8b-4a1f744c64d3",
+      "title": "Semantic HTML and ARIA Labels"
+    }
+  ],
+  "planItems": [
+    {
+      "order": 1,
+      "storyId": "48c9dafb-7c11-4f9f-8275-58e74ed526b1",
+      "title": "Data Persistence with Local Storage",
+      "approach": "Create a storage service module that handles all localStorage interactions. Implement save/load functions with JSON serialization. Add error handling for quota exceeded scenarios.",
+      "filesCreated": [
+        "src/services/storage.js"
+      ],
+      "filesModified": [],
+      "dependencies": [],
+      "complexity": "low",
+      "notes": "Foundation for all other features. Implement early to enable testing with persistent data. Use 'todos' key for todo list and 'filter' key for filter preference."
+    },
+    {
+      "order": 2,
+      "storyId": "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+      "title": "Add a New Todo",
+      "approach": "Create todo model with id generation (UUID or timestamp). Implement form component with input validation. Wire up to storage service for persistence.",
+      "filesCreated": [
+        "src/models/todo.js",
+        "src/components/TodoForm.js",
+        "index.html",
+        "src/styles/main.css"
+      ],
+      "filesModified": [],
+      "dependencies": [
+        "48c9dafb-7c11-4f9f-8275-58e74ed526b1"
+      ],
+      "complexity": "low",
+      "notes": "Todo model includes: id (string), title (string), completed (boolean), createdAt (timestamp). Use crypto.randomUUID() or Date.now() for ID generation."
+    },
+    {
+      "order": 3,
+      "storyId": "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+      "title": "Display Todo List",
+      "approach": "Create TodoList component that renders todos from state. Implement reverse chronological sorting. Add empty state UI. Handle real-time updates via event-driven state management.",
+      "filesCreated": [
+        "src/components/TodoList.js",
+        "src/components/TodoItem.js"
+      ],
+      "filesModified": [
+        "index.html",
+        "src/styles/main.css"
+      ],
+      "dependencies": [
+        "baed5d0a-4d38-4b71-9de1-433e3d119fc3"
+      ],
+      "complexity": "medium",
+      "notes": "Sort by createdAt descending. Empty state shows 'No active todos'. Use CSS for visual distinction of completed items (opacity, strikethrough)."
+    },
+    {
+      "order": 4,
+      "storyId": "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+      "title": "Mark Todo as Complete",
+      "approach": "Add checkbox to TodoItem component. Implement toggle handler that updates todo.completed state and persists to storage. Add CSS for visual distinction.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/components/TodoItem.js",
+        "src/styles/main.css",
+        "src/services/storage.js"
+      ],
+      "dependencies": [
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee"
+      ],
+      "complexity": "low",
+      "notes": "Completed style: strikethrough text, reduced opacity. Checkbox should be accessible with proper labels."
+    },
+    {
+      "order": 5,
+      "storyId": "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+      "title": "Delete a Todo",
+      "approach": "Add delete button to TodoItem with trash icon. Show on hover/focus only. Implement delete handler that removes from state and storage.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/components/TodoItem.js",
+        "src/styles/main.css",
+        "src/services/storage.js"
+      ],
+      "dependencies": [
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee"
+      ],
+      "complexity": "low",
+      "notes": "Use CSS hover/focus-within to show delete button. No confirmation dialog needed."
+    },
+    {
+      "order": 6,
+      "storyId": "73dc3926-97ea-4030-bcfc-beb3f3d393be",
+      "title": "Edit Todo Title",
+      "approach": "Add double-click handler to TodoItem that switches to edit mode. Replace text with input field. Handle Enter (save), Escape (cancel), and blur events. Validate non-empty input.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/components/TodoItem.js",
+        "src/styles/main.css",
+        "src/services/storage.js"
+      ],
+      "dependencies": [
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee"
+      ],
+      "complexity": "medium",
+      "notes": "Edit mode indicated by border and background change. Focus trap within edit input. Reject empty edits."
+    },
+    {
+      "order": 7,
+      "storyId": "fab01c47-d65e-4c9a-adbf-a2876ace0acf",
+      "title": "Display Active Count",
+      "approach": "Create footer component that calculates and displays count of incomplete todos. Update count reactively when todos change. Handle singular/plural forms.",
+      "filesCreated": [
+        "src/components/Footer.js"
+      ],
+      "filesModified": [
+        "index.html",
+        "src/styles/main.css"
+      ],
+      "dependencies": [
+        "423488bc-b6e4-4924-a16e-40d1cf770ba9"
+      ],
+      "complexity": "low",
+      "notes": "Format: '1 item left' or 'N items left'. Count all incomplete todos regardless of filter."
+    },
+    {
+      "order": 8,
+      "storyId": "c7e25fee-c032-468a-a8b9-9b97610146b1",
+      "title": "Filter Todos",
+      "approach": "Add filter state (All/Active/Completed) to app. Create FilterBar component with three buttons. Filter todo list based on completion status. Persist filter choice to localStorage.",
+      "filesCreated": [
+        "src/components/FilterBar.js"
+      ],
+      "filesModified": [
+        "src/components/TodoList.js",
+        "src/services/storage.js",
+        "src/styles/main.css"
+      ],
+      "dependencies": [
+        "fab01c47-d65e-4c9a-adbf-a2876ace0acf"
+      ],
+      "complexity": "medium",
+      "notes": "Filter options: All, Active, Completed. Active filter visually highlighted. Filter header only visible when todos exist."
+    },
+    {
+      "order": 9,
+      "storyId": "5c4045d8-9f19-47e9-9688-7d8c4eed78e5",
+      "title": "Clear Completed Todos",
+      "approach": "Add 'Clear Completed' button to Footer component. Show only when completed todos exist. Implement handler that removes all completed todos from state and storage.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/components/Footer.js",
+        "src/services/storage.js",
+        "src/styles/main.css"
+      ],
+      "dependencies": [
+        "c7e25fee-c032-468a-a8b9-9b97610146b1"
+      ],
+      "complexity": "low",
+      "notes": "Button visibility controlled by conditional rendering. Remove only completed todos visible in current filter."
+    },
+    {
+      "order": 10,
+      "storyId": "d902df67-7e9d-402f-b842-fc1148a79ae8",
+      "title": "Responsive Mobile Design",
+      "approach": "Implement mobile-first CSS with flexbox layout. Use media queries for desktop max-width constraint. Ensure touch targets meet 44px minimum. Add appropriate padding and spacing.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/styles/main.css"
+      ],
+      "dependencies": [
+        "5c4045d8-9f19-47e9-9688-7d8c4eed78e5"
+      ],
+      "complexity": "medium",
+      "notes": "Portrait mode only. Max-width 600px on desktop. Single column layout. No horizontal scroll. Auto-update on orientation change."
+    },
+    {
+      "order": 11,
+      "storyId": "cd860029-931b-4a0b-bcbe-7ee5676d5ec7",
+      "title": "Semantic HTML and ARIA Labels",
+      "approach": "Add semantic HTML5 elements (form, ul, li, button). Add ARIA labels to all interactive elements. Ensure form inputs have associated labels. Use landmark regions.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/components/TodoForm.js",
+        "src/components/TodoList.js",
+        "src/components/TodoItem.js",
+        "src/components/FilterBar.js",
+        "src/components/Footer.js",
+        "index.html"
+      ],
+      "dependencies": [
+        "d902df67-7e9d-402f-b842-fc1148a79ae8"
+      ],
+      "complexity": "low",
+      "notes": "Use role='main', role='navigation' for landmarks. All buttons have aria-label. Form inputs have label elements. List uses ul/li structure."
+    },
+    {
+      "order": 12,
+      "storyId": "384b892d-481e-487a-940f-01acc7a832f2",
+      "title": "Keyboard Accessibility",
+      "approach": "Implement keyboard event handlers for Enter (submit/save), Space (toggle), Escape (cancel). Ensure tab order is logical. Add visible focus indicators. Trap focus in edit mode.",
+      "filesCreated": [],
+      "filesModified": [
+        "src/components/TodoForm.js",
+        "src/components/TodoItem.js",
+        "src/styles/main.css"
+      ],
+      "dependencies": [
+        "cd860029-931b-4a0b-bcbe-7ee5676d5ec7"
+      ],
+      "complexity": "medium",
+      "notes": "Tab order: input -> add button -> todos -> filters -> footer buttons. Focus trap in edit mode. Visible focus rings (outline)."
+    },
+    {
+      "order": 13,
+      "storyId": "2a24f307-d831-4526-a9cd-26dadaccea64",
+      "title": "PWA Manifest Configuration",
+      "approach": "Create manifest.json with app metadata, icons (192x192, 512x512), theme color, display mode 'standalone'. Link manifest in index.html. Generate/add icon assets.",
+      "filesCreated": [
+        "manifest.json",
+        "icons/icon-192.png",
+        "icons/icon-512.png"
+      ],
+      "filesModified": [
+        "index.html"
+      ],
+      "dependencies": [
+        "384b892d-481e-487a-940f-01acc7a832f2"
+      ],
+      "complexity": "low",
+      "notes": "Manifest includes: name, short_name, start_url, display: 'standalone', theme_color, background_color, icons array. Install prompt relies on browser native behavior."
+    },
+    {
+      "order": 14,
+      "storyId": "569a486c-5467-473c-9abb-f7d60c74bd4a",
+      "title": "Service Worker for Offline Support",
+      "approach": "Create service worker with cache-first strategy. Cache all essential assets on install. Serve from cache with network fallback. Clean up old caches on activation. Check for updates daily.",
+      "filesCreated": [
+        "service-worker.js"
+      ],
+      "filesModified": [
+        "index.html"
+      ],
+      "dependencies": [
+        "2a24f307-d831-4526-a9cd-26dadaccea64"
+      ],
+      "complexity": "high",
+      "notes": "Cache: index.html, CSS, JS, manifest, icons. Cache name versioned. Update check once per day. Show error message if cache fails. Full offline functionality with localStorage."
+    },
+    {
+      "order": 15,
+      "storyId": "52eeaad9-2b8d-49f7-8d18-3fa989b9f4bf",
+      "title": "Add a New Todo (Duplicate Story)",
+      "approach": "Already implemented in order 2. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "baed5d0a-4d38-4b71-9de1-433e3d119fc3"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story baed5d0a-4d38-4b71-9de1-433e3d119fc3. No additional work required."
+    },
+    {
+      "order": 16,
+      "storyId": "c28340e9-2bc6-4e8b-ad99-acf543170584",
+      "title": "Display Todo List (Duplicate Story)",
+      "approach": "Already implemented in order 3. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story fa5708f3-e84d-4866-afa3-c3491d9845ee. No additional work required."
+    },
+    {
+      "order": 17,
+      "storyId": "5a5f7bf7-253c-4119-824e-aa7ce58fcd1f",
+      "title": "Mark Todo as Complete (Duplicate Story)",
+      "approach": "Already implemented in order 4. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "423488bc-b6e4-4924-a16e-40d1cf770ba9"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 423488bc-b6e4-4924-a16e-40d1cf770ba9. No additional work required."
+    },
+    {
+      "order": 18,
+      "storyId": "d9cf266f-2ff7-4db9-9751-b3b2b471d81f",
+      "title": "Delete a Todo (Duplicate Story)",
+      "approach": "Already implemented in order 5. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "780fb173-8146-48d9-bf44-313e7ce2dc2f"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 780fb173-8146-48d9-bf44-313e7ce2dc2f. No additional work required."
+    },
+    {
+      "order": 19,
+      "storyId": "4ebd7ea8-36d9-4741-9eeb-0f123aad76d2",
+      "title": "Edit Todo Title (Duplicate Story)",
+      "approach": "Already implemented in order 6. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "73dc3926-97ea-4030-bcfc-beb3f3d393be"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 73dc3926-97ea-4030-bcfc-beb3f3d393be. No additional work required."
+    },
+    {
+      "order": 20,
+      "storyId": "064a1350-e29c-4182-8a1c-7b2de17aeb06",
+      "title": "Filter Todos by Status (Duplicate Story)",
+      "approach": "Already implemented in order 8. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "c7e25fee-c032-468a-a8b9-9b97610146b1"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story c7e25fee-c032-468a-a8b9-9b97610146b1. No additional work required."
+    },
+    {
+      "order": 21,
+      "storyId": "7cc59e5b-9b6f-45f4-ab10-3efff9e8b110",
+      "title": "Display Active Todo Count (Duplicate Story)",
+      "approach": "Already implemented in order 7. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "fab01c47-d65e-4c9a-adbf-a2876ace0acf"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story fab01c47-d65e-4c9a-adbf-a2876ace0acf. No additional work required."
+    },
+    {
+      "order": 22,
+      "storyId": "a4aca928-cefe-47f4-a69b-4acd3e1c4c7b",
+      "title": "Clear Completed Todos (Duplicate Story)",
+      "approach": "Already implemented in order 9. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "5c4045d8-9f19-47e9-9688-7d8c4eed78e5"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 5c4045d8-9f19-47e9-9688-7d8c4eed78e5. No additional work required."
+    },
+    {
+      "order": 23,
+      "storyId": "3b8ffc7e-7c54-452a-a20f-dc5ff5dfa026",
+      "title": "Local Storage Persistence (Duplicate Story)",
+      "approach": "Already implemented in order 1. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "48c9dafb-7c11-4f9f-8275-58e74ed526b1"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 48c9dafb-7c11-4f9f-8275-58e74ed526b1. No additional work required."
+    },
+    {
+      "order": 24,
+      "storyId": "4465af6e-e9cf-42d6-967c-4516edb22cde",
+      "title": "Responsive Mobile Design (Duplicate Story)",
+      "approach": "Already implemented in order 10. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "d902df67-7e9d-402f-b842-fc1148a79ae8"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story d902df67-7e9d-402f-b842-fc1148a79ae8. No additional work required."
+    },
+    {
+      "order": 25,
+      "storyId": "fd4963a7-6a60-47a9-a0a3-da015ef2007b",
+      "title": "PWA Manifest Configuration (Duplicate Story)",
+      "approach": "Already implemented in order 13. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "2a24f307-d831-4526-a9cd-26dadaccea64"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 2a24f307-d831-4526-a9cd-26dadaccea64. No additional work required."
+    },
+    {
+      "order": 26,
+      "storyId": "8be8863b-5280-4fd2-a1e3-5d3cd69ce7a7",
+      "title": "Service Worker for Offline Support (Duplicate Story)",
+      "approach": "Already implemented in order 14. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "569a486c-5467-473c-9abb-f7d60c74bd4a"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 569a486c-5467-473c-9abb-f7d60c74bd4a. No additional work required."
+    },
+    {
+      "order": 27,
+      "storyId": "b1d4384a-dc95-4b5a-b353-4af6a60e71e2",
+      "title": "Keyboard Accessibility (Duplicate Story)",
+      "approach": "Already implemented in order 12. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "384b892d-481e-487a-940f-01acc7a832f2"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story 384b892d-481e-487a-940f-01acc7a832f2. No additional work required."
+    },
+    {
+      "order": 28,
+      "storyId": "45a6ec82-55a8-4dde-be8b-4a1f744c64d3",
+      "title": "Semantic HTML and ARIA Labels (Duplicate Story)",
+      "approach": "Already implemented in order 11. This is a duplicate story.",
+      "filesCreated": [],
+      "filesModified": [],
+      "dependencies": [
+        "cd860029-931b-4a0b-bcbe-7ee5676d5ec7"
+      ],
+      "complexity": "low",
+      "notes": "Duplicate of story cd860029-931b-4a0b-bcbe-7ee5676d5ec7. No additional work required."
+    }
+  ],
+  "sharedComponents": [
+    {
+      "path": "src/services/storage.js",
+      "purpose": "Centralized localStorage access for todos and filter state. Used by all components that need persistence.",
+      "usedBy": [
+        "48c9dafb-7c11-4f9f-8275-58e74ed526b1",
+        "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+        "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+        "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+        "73dc3926-97ea-4030-bcfc-beb3f3d393be",
+        "c7e25fee-c032-468a-a8b9-9b97610146b1",
+        "5c4045d8-9f19-47e9-9688-7d8c4eed78e5"
+      ]
+    },
+    {
+      "path": "src/models/todo.js",
+      "purpose": "Todo data model with id generation, validation, and structure definition. Used by all components that create or manipulate todos.",
+      "usedBy": [
+        "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+        "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+        "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+        "73dc3926-97ea-4030-bcfc-beb3f3d393be"
+      ]
+    },
+    {
+      "path": "src/styles/main.css",
+      "purpose": "Global stylesheet for all components. Contains base styles, responsive layout, accessibility focus styles, and component-specific CSS.",
+      "usedBy": [
+        "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+        "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+        "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+        "73dc3926-97ea-4030-bcfc-beb3f3d393be",
+        "fab01c47-d65e-4c9a-adbf-a2876ace0acf",
+        "c7e25fee-c032-468a-a8b9-9b97610146b1",
+        "5c4045d8-9f19-47e9-9688-7d8c4eed78e5",
+        "d902df67-7e9d-402f-b842-fc1148a79ae8",
+        "384b892d-481e-487a-940f-01acc7a832f2"
+      ]
+    },
+    {
+      "path": "index.html",
+      "purpose": "Main HTML entry point. Contains app structure, component mounting points, and links to manifest/service worker.",
+      "usedBy": [
+        "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+        "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+        "fab01c47-d65e-4c9a-adbf-a2876ace0acf",
+        "cd860029-931b-4a0b-bcbe-7ee5676d5ec7",
+        "2a24f307-d831-4526-a9cd-26dadaccea64",
+        "569a486c-5467-473c-9abb-f7d60c74bd4a"
+      ]
+    }
+  ],
+  "risks": [
+    "Many duplicate user stories detected (14 duplicates total). Implementation plan handles duplicates by referencing original stories.",
+    "Service worker cache strategy may conflict with hot-reload during development. Consider adding development mode detection.",
+    "localStorage quota errors need graceful handling with user feedback. May require fallback to in-memory storage.",
+    "Focus trap in edit mode must not break browser navigation. Test with screen readers and keyboard-only navigation.",
+    "PWA install prompt behavior varies by browser and platform. Testing required on iOS Safari, Chrome Android, and desktop browsers.",
+    "Daily update check for service worker requires timestamp storage and comparison logic. May trigger unnecessary network requests.",
+    "Reverse chronological ordering requires consistent timestamp format. Consider using ISO 8601 strings or Unix timestamps.",
+    "Filter persistence combined with todo deletion may result in empty filtered views. Ensure empty state handles all filter modes.",
+    "Clearing completed todos while in 'Completed' filter will result in empty list. UI should handle this transition smoothly."
+  ],
+  "aiError": null,
+  "clarificationHistory": [
+    {
+      "questions": [
+        {
+          "storyId": "48c9dafb-7c11-4f9f-8275-58e74ed526b1",
+          "question": "What should happen if localStorage quota is exceeded? Should the app gracefully degrade, show an error, or implement a cleanup strategy?",
+          "reason": "This affects error handling strategy and user experience when storage limits are hit. Implementation must decide between data loss, user notification, or automatic cleanup.",
+          "suggestions": [
+            "Silently fail and notify user of quota exceeded",
+            "Implement automatic old data cleanup before new writes",
+            "Use IndexedDB as fallback for larger storage",
+            "Show error dialog and prevent further modifications"
+          ],
+          "priority": "high"
+        },
+        {
+          "storyId": "2a24f307-d831-4526-a9cd-26dadaccea64",
+          "question": "Should the app display an install prompt automatically, or rely only on browser native install UI? If automatic, what triggers it?",
+          "reason": "This determines UX flow and technical implementation of beforeinstallprompt event handling. Different browsers behave differently.",
+          "suggestions": [
+            "Rely solely on browser native install prompt (3-dot menu)",
+            "Show custom install button that triggers beforeinstallprompt",
+            "Show install prompt after first use or after N actions"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "569a486c-5467-473c-9abb-f7d60c74bd4a",
+          "question": "What is the versioning/cache invalidation strategy? How should the app handle updates—automatic refresh, manual refresh prompt, or version checking?",
+          "reason": "Service workers can serve stale content indefinitely without a cache busting strategy. This affects how users receive updates and prevents bugs from persisting.",
+          "suggestions": [
+            "Use content hash in asset filenames for cache busting",
+            "Check for new version on each page load, prompt user to refresh",
+            "Automatically refresh when new service worker activates",
+            "Use skip-waiting to force activation of new service worker"
+          ],
+          "priority": "high"
+        },
+        {
+          "storyId": "384b892d-481e-487a-940f-01acc7a832f2",
+          "question": "Should arrow keys (Up/Down) navigate between todos in the list, or is Tab-only navigation sufficient?",
+          "reason": "This affects keyboard UX and implementation complexity. Arrow key navigation is common in list-based UIs but requires additional implementation.",
+          "suggestions": [
+            "Tab only for navigating interactive elements",
+            "Arrow keys to move focus up/down through todos",
+            "Arrow keys + Tab for comprehensive keyboard navigation"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "cd860029-931b-4a0b-bcbe-7ee5676d5ec7",
+          "question": "Should the app announce state changes to screen readers (e.g., 'Todo marked complete')? If so, which changes require aria-live announcements?",
+          "reason": "Dynamic updates need aria-live regions to be announced. Without this, screen reader users won't be aware of changes made by their own actions.",
+          "suggestions": [
+            "Use aria-live='polite' on todo list for all changes",
+            "Announce only critical changes (completion, deletion)",
+            "Announce filter changes and active count updates",
+            "No live region announcements needed"
+          ],
+          "priority": "high"
+        },
+        {
+          "storyId": "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+          "question": "What validation rules apply to todo text? Maximum length, forbidden characters, whitespace handling?",
+          "reason": "Affects input validation logic and error handling. Implementation must decide how to handle edge cases like only-whitespace input or extremely long text.",
+          "suggestions": [
+            "Trim whitespace; reject if empty after trimming",
+            "Enforce maximum length (e.g., 500 characters)",
+            "Allow any text including special characters",
+            "Validate against specific character patterns"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+          "question": "Should the empty state message be different based on current filter (e.g., 'No active todos' vs 'No completed todos')?",
+          "reason": "Affects messaging clarity and helps users understand why the list appears empty. Implementation must consider filter context.",
+          "suggestions": [
+            "Single generic message for all empty states",
+            "Filter-specific messages (e.g., 'No completed todos')",
+            "Combined message showing filtered results and total count"
+          ],
+          "priority": "low"
+        },
+        {
+          "storyId": "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+          "question": "If a todo is completed, should it still appear in the list when 'All' or 'Active' filters are applied, and how should completion affect the visual hierarchy?",
+          "reason": "This clarifies interaction between completion state and filtering. Implementation needs to know if completed todos stay visible under 'All' filter.",
+          "suggestions": [
+            "Completed todos visible under 'All', hidden under 'Active'",
+            "Completed todos always visible but with reduced opacity",
+            "Completed todos moved to separate section"
+          ],
+          "priority": "low"
+        },
+        {
+          "storyId": "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+          "question": "Should there be an undo/recovery mechanism after deletion, or is permanent deletion the expected behavior?",
+          "reason": "This affects data model and UX. Undo requires storing deleted items temporarily; permanent deletion is simpler but riskier for users.",
+          "suggestions": [
+            "Permanent deletion only",
+            "Undo button available for N seconds after deletion",
+            "Soft delete with recovery within session",
+            "Confirmation dialog before deletion"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "73dc3926-97ea-4030-bcfc-beb3f3d393be",
+          "question": "Can a user click outside the edit input to cancel editing, or does Escape only trigger cancellation? What about clicking on other todos?",
+          "reason": "Affects edit mode exit behavior and UX expectations. Implementation must decide if blur event cancels or saves edits.",
+          "suggestions": [
+            "Escape only; clicking elsewhere saves",
+            "Escape only; clicking elsewhere cancels",
+            "Both Escape and blur cancel; Enter only saves",
+            "Clicking specific areas (e.g., outside todo) cancels"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "c7e25fee-c032-468a-a8b9-9b97610146b1",
+          "question": "When viewing 'Active' or 'Completed' filter, should the active count still reflect all incomplete todos, or only those visible in current filter?",
+          "reason": "Story explicitly states 'doesn't delete todos' but active count interpretation affects user understanding of total workload.",
+          "suggestions": [
+            "Active count always shows all incomplete todos regardless of filter",
+            "Active count shows only visible todos in current filter",
+            "Show both counts: filtered and total"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "fab01c47-d65e-4c9a-adbf-a2876ace0acf",
+          "question": "Where exactly should the active count be positioned? In the footer, header, or both? Should it be always visible or only when todos exist?",
+          "reason": "This affects layout decisions and whether footer appears when no todos exist.",
+          "suggestions": [
+            "Footer only, always visible",
+            "Footer only, hidden when no todos",
+            "Header and footer",
+            "Floating badge in corner"
+          ],
+          "priority": "low"
+        },
+        {
+          "storyId": "5c4045d8-9f19-47e9-9688-7d8c4eed78e5",
+          "question": "Should 'Clear Completed' button be in the footer next to active count, or elsewhere? Should it require confirmation?",
+          "reason": "Affects layout and accidental deletion risk. Destructive action without confirmation could lose user data.",
+          "suggestions": [
+            "Footer, no confirmation required",
+            "Footer, requires confirmation",
+            "Separate settings/actions menu",
+            "Confirmation dialog mandatory"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "52eeaad9-2b8d-49f7-8d18-3fa989b9f4bf",
+          "question": "Story says 'appears at the bottom' but another story says 'reverse chronological order (newest first)'. Which is correct?",
+          "reason": "Direct conflict in requirements. Implementation cannot satisfy both simultaneously. Needs clarification on desired sort order.",
+          "suggestions": [
+            "Newest first (top of list)",
+            "Newest last (bottom of list)",
+            "User-selectable sort order"
+          ],
+          "priority": "high"
+        },
+        {
+          "storyId": "3b8ffc7e-7c54-452a-a20f-dc5ff5dfa026",
+          "question": "How should the app handle localStorage data corruption or incompatible data versions? Should it gracefully fall back to empty state?",
+          "reason": "Real-world issue when localStorage contains invalid JSON or old data format. Implementation must decide between data recovery and reset.",
+          "suggestions": [
+            "Silently reset to empty state on corruption",
+            "Show warning and ask user to confirm reset",
+            "Attempt to parse and migrate old data format",
+            "Log error but continue with empty state"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "4465af6e-e9cf-42d6-967c-4516edb22cde",
+          "question": "Should the app support landscape orientation on mobile? What is the minimum supported screen size?",
+          "reason": "Affects responsive design breakpoints and testing scope. Implementation must know if tablets and landscape mode require specific handling.",
+          "suggestions": [
+            "Mobile portrait only, tablet desktop layout",
+            "Support both portrait and landscape",
+            "Minimum width 320px (older phones) or 375px (modern phones)"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "fd4963a7-6a60-47a9-a0a3-da015ef2007b",
+          "question": "Should the app show a banner or notification when an update is available (new service worker version), and should auto-update or require user action?",
+          "reason": "Affects PWA update strategy and user awareness of new features. Different approaches have tradeoffs in user control vs freshness.",
+          "suggestions": [
+            "Auto-update silently in background",
+            "Show banner with 'Update Available' button",
+            "Check on each page load and notify in footer",
+            "No notification; user manually refreshes"
+          ],
+          "priority": "medium"
+        },
+        {
+          "storyId": "8be8863b-5280-4fd2-a1e3-5d3cd69ce7a7",
+          "question": "Should todos added/modified offline sync when connection restores, or is offline-only local editing expected behavior?",
+          "reason": "Offline sync is complex and affects data model. Without clarity, implementation might assume offline is 'read-only cached' vs 'full write capability offline'.",
+          "suggestions": [
+            "Offline editing works, but no sync mechanism (local-only)",
+            "Todos added offline stay in localStorage only",
+            "Data syncs to backend when connection restores (requires backend)",
+            "Offline is read-only; edits disabled without connection"
+          ],
+          "priority": "high"
+        },
+        {
+          "storyId": "b1d4384a-dc95-4b5a-b353-4af6a60e71e2",
+          "question": "Should focus management trap focus within modal edit mode, or allow Tab to move focus outside the edited todo?",
+          "reason": "Affects keyboard UX during edit mode. Focus trapping is more restrictive but ensures users don't accidentally trigger other actions.",
+          "suggestions": [
+            "Allow Tab to move focus anywhere in page",
+            "Trap focus within edit input during edit mode",
+            "Tab moves to next todo in list"
+          ],
+          "priority": "low"
+        },
+        {
+          "storyId": "45a6ec82-55a8-4dde-be8b-4a1f744c64d3",
+          "question": "Should completion/deletion of todos be announced to screen readers? If so, should individual actions or summary announcements be used?",
+          "reason": "Dynamic content changes require live region announcements for screen reader users. Implementation must decide what gets announced and when.",
+          "suggestions": [
+            "Announce each action individually (todo added/completed/deleted)",
+            "Announce only summary (active count changed)",
+            "Use aria-live='assertive' for important changes only",
+            "No announcements beyond visual updates"
+          ],
+          "priority": "high"
+        }
+      ],
+      "answers": [
+        {
+          "question": {
+            "storyId": "48c9dafb-7c11-4f9f-8275-58e74ed526b1",
+            "question": "What should happen if localStorage quota is exceeded? Should the app gracefully degrade, show an error, or implement a cleanup strategy?",
+            "reason": "This affects error handling strategy and user experience when storage limits are hit. Implementation must decide between data loss, user notification, or automatic cleanup.",
+            "suggestions": [
+              "Silently fail and notify user of quota exceeded",
+              "Implement automatic old data cleanup before new writes",
+              "Use IndexedDB as fallback for larger storage",
+              "Show error dialog and prevent further modifications"
+            ],
+            "priority": "high"
+          },
+          "answer": "Just show an error, this is a demo"
+        },
+        {
+          "question": {
+            "storyId": "2a24f307-d831-4526-a9cd-26dadaccea64",
+            "question": "Should the app display an install prompt automatically, or rely only on browser native install UI? If automatic, what triggers it?",
+            "reason": "This determines UX flow and technical implementation of beforeinstallprompt event handling. Different browsers behave differently.",
+            "suggestions": [
+              "Rely solely on browser native install prompt (3-dot menu)",
+              "Show custom install button that triggers beforeinstallprompt",
+              "Show install prompt after first use or after N actions"
+            ],
+            "priority": "medium"
+          },
+          "answer": "rely on browser native install"
+        },
+        {
+          "question": {
+            "storyId": "569a486c-5467-473c-9abb-f7d60c74bd4a",
+            "question": "What is the versioning/cache invalidation strategy? How should the app handle updates—automatic refresh, manual refresh prompt, or version checking?",
+            "reason": "Service workers can serve stale content indefinitely without a cache busting strategy. This affects how users receive updates and prevents bugs from persisting.",
+            "suggestions": [
+              "Use content hash in asset filenames for cache busting",
+              "Check for new version on each page load, prompt user to refresh",
+              "Automatically refresh when new service worker activates",
+              "Use skip-waiting to force activation of new service worker"
+            ],
+            "priority": "high"
+          },
+          "answer": "Check once a day if a new version is available"
+        },
+        {
+          "question": {
+            "storyId": "384b892d-481e-487a-940f-01acc7a832f2",
+            "question": "Should arrow keys (Up/Down) navigate between todos in the list, or is Tab-only navigation sufficient?",
+            "reason": "This affects keyboard UX and implementation complexity. Arrow key navigation is common in list-based UIs but requires additional implementation.",
+            "suggestions": [
+              "Tab only for navigating interactive elements",
+              "Arrow keys to move focus up/down through todos",
+              "Arrow keys + Tab for comprehensive keyboard navigation"
+            ],
+            "priority": "medium"
+          },
+          "answer": "tab is sufficient"
+        },
+        {
+          "question": {
+            "storyId": "cd860029-931b-4a0b-bcbe-7ee5676d5ec7",
+            "question": "Should the app announce state changes to screen readers (e.g., 'Todo marked complete')? If so, which changes require aria-live announcements?",
+            "reason": "Dynamic updates need aria-live regions to be announced. Without this, screen reader users won't be aware of changes made by their own actions.",
+            "suggestions": [
+              "Use aria-live='polite' on todo list for all changes",
+              "Announce only critical changes (completion, deletion)",
+              "Announce filter changes and active count updates",
+              "No live region announcements needed"
+            ],
+            "priority": "high"
+          },
+          "answer": "no"
+        },
+        {
+          "question": {
+            "storyId": "baed5d0a-4d38-4b71-9de1-433e3d119fc3",
+            "question": "What validation rules apply to todo text? Maximum length, forbidden characters, whitespace handling?",
+            "reason": "Affects input validation logic and error handling. Implementation must decide how to handle edge cases like only-whitespace input or extremely long text.",
+            "suggestions": [
+              "Trim whitespace; reject if empty after trimming",
+              "Enforce maximum length (e.g., 500 characters)",
+              "Allow any text including special characters",
+              "Validate against specific character patterns"
+            ],
+            "priority": "medium"
+          },
+          "answer": "none"
+        },
+        {
+          "question": {
+            "storyId": "fa5708f3-e84d-4866-afa3-c3491d9845ee",
+            "question": "Should the empty state message be different based on current filter (e.g., 'No active todos' vs 'No completed todos')?",
+            "reason": "Affects messaging clarity and helps users understand why the list appears empty. Implementation must consider filter context.",
+            "suggestions": [
+              "Single generic message for all empty states",
+              "Filter-specific messages (e.g., 'No completed todos')",
+              "Combined message showing filtered results and total count"
+            ],
+            "priority": "low"
+          },
+          "answer": "No active todos"
+        },
+        {
+          "question": {
+            "storyId": "423488bc-b6e4-4924-a16e-40d1cf770ba9",
+            "question": "If a todo is completed, should it still appear in the list when 'All' or 'Active' filters are applied, and how should completion affect the visual hierarchy?",
+            "reason": "This clarifies interaction between completion state and filtering. Implementation needs to know if completed todos stay visible under 'All' filter.",
+            "suggestions": [
+              "Completed todos visible under 'All', hidden under 'Active'",
+              "Completed todos always visible but with reduced opacity",
+              "Completed todos moved to separate section"
+            ],
+            "priority": "low"
+          },
+          "answer": "no, only completed"
+        },
+        {
+          "question": {
+            "storyId": "780fb173-8146-48d9-bf44-313e7ce2dc2f",
+            "question": "Should there be an undo/recovery mechanism after deletion, or is permanent deletion the expected behavior?",
+            "reason": "This affects data model and UX. Undo requires storing deleted items temporarily; permanent deletion is simpler but riskier for users.",
+            "suggestions": [
+              "Permanent deletion only",
+              "Undo button available for N seconds after deletion",
+              "Soft delete with recovery within session",
+              "Confirmation dialog before deletion"
+            ],
+            "priority": "medium"
+          },
+          "answer": "no"
+        },
+        {
+          "question": {
+            "storyId": "73dc3926-97ea-4030-bcfc-beb3f3d393be",
+            "question": "Can a user click outside the edit input to cancel editing, or does Escape only trigger cancellation? What about clicking on other todos?",
+            "reason": "Affects edit mode exit behavior and UX expectations. Implementation must decide if blur event cancels or saves edits.",
+            "suggestions": [
+              "Escape only; clicking elsewhere saves",
+              "Escape only; clicking elsewhere cancels",
+              "Both Escape and blur cancel; Enter only saves",
+              "Clicking specific areas (e.g., outside todo) cancels"
+            ],
+            "priority": "medium"
+          },
+          "answer": "no"
+        },
+        {
+          "question": {
+            "storyId": "c7e25fee-c032-468a-a8b9-9b97610146b1",
+            "question": "When viewing 'Active' or 'Completed' filter, should the active count still reflect all incomplete todos, or only those visible in current filter?",
+            "reason": "Story explicitly states 'doesn't delete todos' but active count interpretation affects user understanding of total workload.",
+            "suggestions": [
+              "Active count always shows all incomplete todos regardless of filter",
+              "Active count shows only visible todos in current filter",
+              "Show both counts: filtered and total"
+            ],
+            "priority": "medium"
+          },
+          "answer": "only the visible ones"
+        },
+        {
+          "question": {
+            "storyId": "fab01c47-d65e-4c9a-adbf-a2876ace0acf",
+            "question": "Where exactly should the active count be positioned? In the footer, header, or both? Should it be always visible or only when todos exist?",
+            "reason": "This affects layout decisions and whether footer appears when no todos exist.",
+            "suggestions": [
+              "Footer only, always visible",
+              "Footer only, hidden when no todos",
+              "Header and footer",
+              "Floating badge in corner"
+            ],
+            "priority": "low"
+          },
+          "answer": "header, only visible when a todo exists"
+        },
+        {
+          "question": {
+            "storyId": "5c4045d8-9f19-47e9-9688-7d8c4eed78e5",
+            "question": "Should 'Clear Completed' button be in the footer next to active count, or elsewhere? Should it require confirmation?",
+            "reason": "Affects layout and accidental deletion risk. Destructive action without confirmation could lose user data.",
+            "suggestions": [
+              "Footer, no confirmation required",
+              "Footer, requires confirmation",
+              "Separate settings/actions menu",
+              "Confirmation dialog mandatory"
+            ],
+            "priority": "medium"
+          },
+          "answer": "sure"
+        },
+        {
+          "question": {
+            "storyId": "52eeaad9-2b8d-49f7-8d18-3fa989b9f4bf",
+            "question": "Story says 'appears at the bottom' but another story says 'reverse chronological order (newest first)'. Which is correct?",
+            "reason": "Direct conflict in requirements. Implementation cannot satisfy both simultaneously. Needs clarification on desired sort order.",
+            "suggestions": [
+              "Newest first (top of list)",
+              "Newest last (bottom of list)",
+              "User-selectable sort order"
+            ],
+            "priority": "high"
+          },
+          "answer": "reverse chronological order"
+        },
+        {
+          "question": {
+            "storyId": "3b8ffc7e-7c54-452a-a20f-dc5ff5dfa026",
+            "question": "How should the app handle localStorage data corruption or incompatible data versions? Should it gracefully fall back to empty state?",
+            "reason": "Real-world issue when localStorage contains invalid JSON or old data format. Implementation must decide between data recovery and reset.",
+            "suggestions": [
+              "Silently reset to empty state on corruption",
+              "Show warning and ask user to confirm reset",
+              "Attempt to parse and migrate old data format",
+              "Log error but continue with empty state"
+            ],
+            "priority": "medium"
+          },
+          "answer": "fall back to empty state"
+        },
+        {
+          "question": {
+            "storyId": "4465af6e-e9cf-42d6-967c-4516edb22cde",
+            "question": "Should the app support landscape orientation on mobile? What is the minimum supported screen size?",
+            "reason": "Affects responsive design breakpoints and testing scope. Implementation must know if tablets and landscape mode require specific handling.",
+            "suggestions": [
+              "Mobile portrait only, tablet desktop layout",
+              "Support both portrait and landscape",
+              "Minimum width 320px (older phones) or 375px (modern phones)"
+            ],
+            "priority": "medium"
+          },
+          "answer": "no only portrait"
+        },
+        {
+          "question": {
+            "storyId": "fd4963a7-6a60-47a9-a0a3-da015ef2007b",
+            "question": "Should the app show a banner or notification when an update is available (new service worker version), and should auto-update or require user action?",
+            "reason": "Affects PWA update strategy and user awareness of new features. Different approaches have tradeoffs in user control vs freshness.",
+            "suggestions": [
+              "Auto-update silently in background",
+              "Show banner with 'Update Available' button",
+              "Check on each page load and notify in footer",
+              "No notification; user manually refreshes"
+            ],
+            "priority": "medium"
+          },
+          "answer": "should auto-update"
+        },
+        {
+          "question": {
+            "storyId": "8be8863b-5280-4fd2-a1e3-5d3cd69ce7a7",
+            "question": "Should todos added/modified offline sync when connection restores, or is offline-only local editing expected behavior?",
+            "reason": "Offline sync is complex and affects data model. Without clarity, implementation might assume offline is 'read-only cached' vs 'full write capability offline'.",
+            "suggestions": [
+              "Offline editing works, but no sync mechanism (local-only)",
+              "Todos added offline stay in localStorage only",
+              "Data syncs to backend when connection restores (requires backend)",
+              "Offline is read-only; edits disabled without connection"
+            ],
+            "priority": "high"
+          },
+          "answer": "yes"
+        },
+        {
+          "question": {
+            "storyId": "b1d4384a-dc95-4b5a-b353-4af6a60e71e2",
+            "question": "Should focus management trap focus within modal edit mode, or allow Tab to move focus outside the edited todo?",
+            "reason": "Affects keyboard UX during edit mode. Focus trapping is more restrictive but ensures users don't accidentally trigger other actions.",
+            "suggestions": [
+              "Allow Tab to move focus anywhere in page",
+              "Trap focus within edit input during edit mode",
+              "Tab moves to next todo in list"
+            ],
+            "priority": "low"
+          },
+          "answer": "trap focus within modal edit mode"
+        },
+        {
+          "question": {
+            "storyId": "45a6ec82-55a8-4dde-be8b-4a1f744c64d3",
+            "question": "Should completion/deletion of todos be announced to screen readers? If so, should individual actions or summary announcements be used?",
+            "reason": "Dynamic content changes require live region announcements for screen reader users. Implementation must decide what gets announced and when.",
+            "suggestions": [
+              "Announce each action individually (todo added/completed/deleted)",
+              "Announce only summary (active count changed)",
+              "Use aria-live='assertive' for important changes only",
+              "No announcements beyond visual updates"
+            ],
+            "priority": "high"
+          },
+          "answer": "no"
+        }
+      ],
+      "feedback": null
+    }
+  ],
+  "createdAt": "2026-02-09T22:20:04.041Z",
+  "updatedAt": "2026-02-09T22:20:24.775Z",
+  "approvedAt": "2026-02-09T22:20:24.775Z"
+}

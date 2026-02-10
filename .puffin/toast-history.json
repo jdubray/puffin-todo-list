@@ -1,0 +1,684 @@
+{
+  "version": 1,
+  "toasts": [
+    {
+      "id": "toast-1770675507488-cv4x1i9",
+      "timestamp": 1770675507488,
+      "message": "CRE: Generating plan with your answers...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770677718460-t3hyg1r",
+      "timestamp": 1770677718460,
+      "message": "CRE: Plan approved, RIS generated, and assertions ready",
+      "type": "success",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678545848-7e0wkyr",
+      "timestamp": 1770678545848,
+      "message": "Implementing: Data Persistence",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678762443-k50xa5u",
+      "timestamp": 1770678762443,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678762505-zj3wd4c",
+      "timestamp": 1770678762505,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678763477-9avf4qy",
+      "timestamp": 1770678763477,
+      "message": "Implementing: Add a New Todo",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678839967-jqp231d",
+      "timestamp": 1770678839967,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678840044-2uxetn0",
+      "timestamp": 1770678840044,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678841012-i2ld7kl",
+      "timestamp": 1770678841012,
+      "message": "Implementing: Display Todo List",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678896388-di6eg8s",
+      "timestamp": 1770678896388,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678896466-os0uyjs",
+      "timestamp": 1770678896466,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678897438-nxzbh7d",
+      "timestamp": 1770678897438,
+      "message": "Implementing: Mark Todo as Complete",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678930223-c2aoaag",
+      "timestamp": 1770678930223,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678930328-eg8ajzm",
+      "timestamp": 1770678930328,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678931281-w0yr32g",
+      "timestamp": 1770678931281,
+      "message": "Implementing: Delete a Todo",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678958283-4jcvihm",
+      "timestamp": 1770678958283,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678958375-ibciu77",
+      "timestamp": 1770678958375,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678959341-hpqgyxo",
+      "timestamp": 1770678959341,
+      "message": "Implementing: Edit Todo Title",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770678997327-7gdqgj9",
+      "timestamp": 1770678997327,
+      "message": "Implementing: Display Active Count",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679019755-vo3fn4n",
+      "timestamp": 1770679019755,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679019853-ilk36aj",
+      "timestamp": 1770679019853,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679020816-2t02qae",
+      "timestamp": 1770679020816,
+      "message": "Implementing: Filter Todos",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679050837-vxjqth4",
+      "timestamp": 1770679050837,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679050941-511tetd",
+      "timestamp": 1770679050941,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679051899-jw67idb",
+      "timestamp": 1770679051899,
+      "message": "Implementing: Clear Completed Todos",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679078623-9tl3132",
+      "timestamp": 1770679078623,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679078720-fbvktnv",
+      "timestamp": 1770679078720,
+      "message": "⚠️ Assertions: 1/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679079684-jsn1m4g",
+      "timestamp": 1770679079684,
+      "message": "Implementing: Responsive Mobile Design",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679105868-gupuko8",
+      "timestamp": 1770679105868,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679106012-i6kqia8",
+      "timestamp": 1770679106012,
+      "message": "⚠️ Assertions: 2/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679106951-10iprr4",
+      "timestamp": 1770679106951,
+      "message": "Implementing: Semantic HTML and ARIA Labels",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679263303-ef9jstg",
+      "timestamp": 1770679263303,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679263473-3ezdgnb",
+      "timestamp": 1770679263473,
+      "message": "⚠️ Assertions: 1/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679264407-5npjmw8",
+      "timestamp": 1770679264407,
+      "message": "Implementing: Keyboard Accessibility",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679349294-59kiwzs",
+      "timestamp": 1770679349294,
+      "message": "Verifying 5 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679349426-r3hxh2h",
+      "timestamp": 1770679349427,
+      "message": "⚠️ Assertions: 1/5 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679350375-izj47p6",
+      "timestamp": 1770679350375,
+      "message": "Implementing: PWA Manifest Configuration",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679586917-0g011iz",
+      "timestamp": 1770679586917,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679587037-7rfhe2i",
+      "timestamp": 1770679587037,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679587998-pcu57xs",
+      "timestamp": 1770679587998,
+      "message": "Implementing: Service Worker for Offline Support",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679749090-kqiutsj",
+      "timestamp": 1770679749090,
+      "message": "Verifying 5 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679749199-df37fsx",
+      "timestamp": 1770679749199,
+      "message": "⚠️ Assertions: 0/5 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679750167-zibksou",
+      "timestamp": 1770679750167,
+      "message": "Implementing: Add a New Todo",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679792149-yoiogn2",
+      "timestamp": 1770679792149,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679792187-xx76gho",
+      "timestamp": 1770679792187,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679793194-3t9o2l2",
+      "timestamp": 1770679793194,
+      "message": "Implementing: Display Todo List",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679817666-mgsax1k",
+      "timestamp": 1770679817666,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679817750-5rf5q77",
+      "timestamp": 1770679817750,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679818721-dhl4s0k",
+      "timestamp": 1770679818721,
+      "message": "Implementing: Mark Todo as Complete",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679839242-s0944og",
+      "timestamp": 1770679839242,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679839326-z6x362i",
+      "timestamp": 1770679839326,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679840303-gnhsk12",
+      "timestamp": 1770679840303,
+      "message": "Implementing: Delete a Todo",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679857920-pg3mj96",
+      "timestamp": 1770679857920,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679858004-v85e0uy",
+      "timestamp": 1770679858004,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679858988-1bwo3sq",
+      "timestamp": 1770679858988,
+      "message": "Implementing: Edit Todo Title",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679878185-8aeqz9g",
+      "timestamp": 1770679878185,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679878270-wq1b522",
+      "timestamp": 1770679878270,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679879247-g2fc860",
+      "timestamp": 1770679879247,
+      "message": "Implementing: Filter Todos by Status",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679899535-57kfq10",
+      "timestamp": 1770679899535,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679899622-ie9otok",
+      "timestamp": 1770679899622,
+      "message": "⚠️ Assertions: 1/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679900603-wdlsg6y",
+      "timestamp": 1770679900603,
+      "message": "Implementing: Display Active Todo Count",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679910130-pwnvh0p",
+      "timestamp": 1770679910130,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679910215-6d5u9gu",
+      "timestamp": 1770679910215,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679911194-3wcm9kk",
+      "timestamp": 1770679911194,
+      "message": "Implementing: Clear Completed Todos",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679919730-5tnhc06",
+      "timestamp": 1770679919730,
+      "message": "Verifying 5 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679919823-pllxg1n",
+      "timestamp": 1770679919823,
+      "message": "⚠️ Assertions: 0/5 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679920804-hwonq9g",
+      "timestamp": 1770679920804,
+      "message": "Implementing: Local Storage Persistence",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679933390-knoxcix",
+      "timestamp": 1770679933390,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679933471-g9jtn0s",
+      "timestamp": 1770679933471,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679934454-ezybdh0",
+      "timestamp": 1770679934454,
+      "message": "Implementing: Responsive Mobile Design",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679956082-uagtj0h",
+      "timestamp": 1770679956082,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679956182-46ghurb",
+      "timestamp": 1770679956182,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679957159-8tbnfjs",
+      "timestamp": 1770679957159,
+      "message": "Implementing: PWA Manifest Configuration",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679975296-qwvbqwh",
+      "timestamp": 1770679975296,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679975398-3jzce6c",
+      "timestamp": 1770679975398,
+      "message": "⚠️ Assertions: 1/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770679976389-g5hdqia",
+      "timestamp": 1770679976389,
+      "message": "Implementing: Service Worker for Offline Support",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680043793-x3fguhx",
+      "timestamp": 1770680043793,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680043889-alkgii2",
+      "timestamp": 1770680043889,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680044878-7t6vccl",
+      "timestamp": 1770680044878,
+      "message": "Implementing: Keyboard Accessibility",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680076079-5iz9bpr",
+      "timestamp": 1770680076079,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680076181-tfvl7cp",
+      "timestamp": 1770680076182,
+      "message": "⚠️ Assertions: 0/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680077161-y09rk3c",
+      "timestamp": 1770680077161,
+      "message": "Implementing: Semantic HTML and ARIA Labels",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680099037-a4kne0h",
+      "timestamp": 1770680099037,
+      "message": "Verifying 6 assertion(s)...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680099138-c604110",
+      "timestamp": 1770680099138,
+      "message": "⚠️ Assertions: 3/6 passed",
+      "type": "warning",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680100123-7odi7sv",
+      "timestamp": 1770680100123,
+      "message": "All stories completed! Starting code review...",
+      "type": "success",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680154223-ewuciye",
+      "timestamp": 1770680154223,
+      "message": "Code review complete: 9 findings. Starting bug fixes...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680156270-waubaxv",
+      "timestamp": 1770680156270,
+      "message": "Fixing: innerHTML used to build the update banner with sta...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680176981-gfj6uur",
+      "timestamp": 1770680176981,
+      "message": "Fixing: renderTodoList rebuilds the entire DOM list on eve...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680223824-at75h4o",
+      "timestamp": 1770680223825,
+      "message": "Fixing: service-worker.js is not included in ASSETS_TO_CAC...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680259142-eu6z3ym",
+      "timestamp": 1770680259142,
+      "message": "Fixing: Service worker registration promise has no .catch(...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680284327-p8j4jk0",
+      "timestamp": 1770680284327,
+      "message": "Fixing: generateId() uses Date.now().toString(36) + counte...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680303889-l30lc5p",
+      "timestamp": 1770680303889,
+      "message": "Fixing: In saveEdit(), if the user trims the input to empt...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680357067-l7x3zbg",
+      "timestamp": 1770680357067,
+      "message": "Fixing: The controllerchange listener calls window.locatio...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680381418-5yj10j8",
+      "timestamp": 1770680381418,
+      "message": "Fixing: No automated tests exist for any of the 28 user st...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680526210-ph56tmw",
+      "timestamp": 1770680526210,
+      "message": "Fixing: Filter button default color #666 on #f5f5f5 backgr...",
+      "type": "info",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770680545726-2ac1v27",
+      "timestamp": 1770680545726,
+      "message": "Orchestration complete! Fixed 9/9 issues.",
+      "type": "success",
+      "source": "app"
+    },
+    {
+      "id": "toast-1770681742618-x9ja4nu",
+      "timestamp": 1770681742618,
+      "message": "Sprint closed successfully",
+      "type": "success",
+      "source": "app"
+    }
+  ]
+}

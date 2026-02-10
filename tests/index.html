@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo PWA - Tests</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 24px;
+      background: #f5f5f5;
+      color: #1a1a1a;
+    }
+    h1 { margin-bottom: 16px; }
+    h2 { margin: 16px 0 8px; }
+    h3 { margin: 12px 0 4px; }
+    h3.fail { color: #e53935; }
+    .result {
+      padding: 6px 12px;
+      margin: 2px 0;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+    .result.pass { background: #e8f5e9; color: #2e7d32; }
+    .result.fail { background: #ffebee; color: #c62828; }
+    .result pre {
+      margin: 4px 0 0 24px;
+      font-size: 0.8125rem;
+      white-space: pre-wrap;
+    }
+    .icon { font-weight: bold; }
+
+    /* Hidden app DOM — needed for integration tests */
+    #app-container { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Todo PWA Test Suite</h1>
+  <div id="test-output">Running tests...</div>
+
+  <!-- App DOM (hidden) — required for integration tests that manipulate DOM -->
+  <div id="app-container">
+    <form id="todo-form">
+      <input type="text" id="todo-input" class="todo-input">
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+    <nav class="filter-tabs">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+      <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+    </nav>
+    <ul id="todo-list" class="todo-list" role="list"></ul>
+    <p id="empty-state" class="empty-state" hidden>No todos yet. Add one above!</p>
+    <footer id="footer" class="footer" hidden>
+      <span id="active-count" class="active-count" role="status" aria-live="polite"></span>
+      <button id="clear-completed" class="clear-completed-btn" hidden>Clear Completed</button>
+    </footer>
+  </div>
+
+  <!-- Load app code (functions become available globally) -->
+  <script src="../app.js"></script>
+  <!-- Load test runner and tests -->
+  <script src="test-runner.js"></script>
+  <script src="tests.js"></script>
+  <script>
+    // Initialize DOM caches (needed for rendering tests)
+    cacheDomElements();
+
+    // Run all tests
+    testRunner.run().then(({ passed, failed, total }) => {
+      document.title = (failed === 0 ? 'PASS' : 'FAIL') +
+        ' - ' + passed + '/' + total + ' - Todo PWA Tests';
+    });
+  </script>
+</body>
+</html>
