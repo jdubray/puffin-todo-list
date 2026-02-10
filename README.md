@@ -2,9 +2,13 @@
 
 A simple, offline-first todo list application built as a Progressive Web App.
 
+![Todo PWA Screenshot](docs/todo-app.png)
+
 ## Features
 
 - Add, edit, delete, and toggle todos
+- Weekly calendar view showing completed todo counts per day
+- Select a day to view todos completed on that date
 - Filter by All / Active / Completed
 - Clear all completed todos at once
 - Double-click or press Enter on a todo to edit inline
