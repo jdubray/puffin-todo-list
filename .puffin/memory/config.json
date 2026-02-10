@@ -1,7 +1,0 @@
-{
-  "version": 1,
-  "enabled": true,
-  "autoMemorize": false,
-  "model": "haiku",
-  "maxPromptsPerExtraction": 50
-}
